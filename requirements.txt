@@ -1,16 +1,26 @@
---extra-index-url https://download.pytorch.org/whl/cu116
-torch==1.13.1+cu116
-torchvision==0.14.1+cu116
-torchaudio==0.13.1+cu116
-torchtext==0.14.1
-pytorch-lightning==1.8.6
-sanic==22.6.2
-transformers==4.21.2
-accelerate
-text-unidecode
-nemo_toolkit[asr]==1.15.0
-git+https://github.com/openai/whisper.git
-git+https://github.com/m-bain/whisperX.git@4cb167a225c0ebaea127fd6049abfaa3af9f8bb4
-git+https://github.com/facebookresearch/demucs#egg=demucs
-deepmultilingualpunctuation
-openai
+# Core ML
+torch>=2.0
+torchaudio>=2.0
+numpy>=1.24
+
+# Transcription
+openai-whisper>=20231117
+
+# Speaker diarization
+pyannote.audio>=3.1
+
+# Semantic segmentation
+sentence-transformers>=2.2
+transformers>=4.36
+accelerate>=0.25
+bitsandbytes>=0.41
+scipy>=1.10
+
+# Audio I/O
+soundfile>=0.12
+
+# Alignment / punctuation
+deepmultilingualpunctuation>=1.0
+
+# Output formatting
+srt>=3.5
